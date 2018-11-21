@@ -20,8 +20,6 @@ Template to build RingCentral chatbot with [ringcentral-chatbot-python](https://
 ## Development & Quick start
 
 ```bash
-git clone git@github.com:zxdong262/ringcentral-chatbot-template-python.git
-cd ringcentral-chatbot-template-python
 
 # use virtualenv
 pip3 install virtualenv # might need sudo
