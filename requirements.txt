@@ -1,6 +1,2 @@
-python-dotenv
-ringcentral
-pydash
-boto3
 flask
-ringcentral_bot_framework
+ringcentral_bot_framework >=0.0.4
