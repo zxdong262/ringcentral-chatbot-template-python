@@ -1,2 +1,2 @@
 flask
-ringcentral_bot_framework >=0.0.4
+ringcentral_bot_framework >=0.0.5
