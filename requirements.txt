@@ -1,0 +1,6 @@
+python-dotenv
+ringcentral
+pydash
+boto3
+flask
+ringcentral_bot_framework
