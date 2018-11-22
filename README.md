@@ -32,6 +32,7 @@ source ./venv/bin/activate
 
 # install deps
 pip install -r requirements.txt
+npm i
 
 # run ngrok proxy
 # since bot need https server,
