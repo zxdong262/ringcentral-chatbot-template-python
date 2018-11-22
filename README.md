@@ -96,7 +96,7 @@ Edit `lambda/serverless.yml`, and make sure you set the proper name and required
     RINGCENTRAL_BOT_CLIENT_ID:
     RINGCENTRAL_BOT_CLIENT_SECRET:
 
-    ## user might not need it
+    ## if you only have one bot app, it is not needed
     RINGCENTRAL_USER_CLIENT_ID: xxxx
     RINGCENTRAL_USER_CLIENT_SECRET: xxxx
 
@@ -111,14 +111,14 @@ Edit `lambda/serverless.yml`, and make sure you set the proper name and required
 
 ```
 
-Deploy to AWS Lambda with `bin/build`
+Deploy to AWS Lambda with `bin/deploy`
 
 ```bash
 # install serverless related modules
 npm i
 
 # Run this cmd to deploy to AWS Lambda, full build, may take more time
-bin/build
+bin/deploy
 
 ## watch Lambda server log
 bin/watch
