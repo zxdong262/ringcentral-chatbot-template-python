@@ -2,6 +2,7 @@
 sample config module
 run "cp config.sample.py config.py" to create local config
 edit config.py functions to override default bot behavior
+since all functions are optional, you could keep those you edited, delete others in config.py
 """
 __name__ = 'localConfig'
 __package__ = 'ringcentral_bot_framework'
