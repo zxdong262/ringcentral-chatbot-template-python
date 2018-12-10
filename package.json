@@ -1,6 +1,6 @@
 {
   "name": "ringcentral-chatbot-template-python",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "description": "Template to build RingCentral chatbot with ringcentral-chatbot-python",
   "main": "index.js",
   "directories": {
