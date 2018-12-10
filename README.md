@@ -9,6 +9,8 @@ Template to build RingCentral chatbot with [ringcentral-chatbot-python](https://
 - [Development & Quick start](#development--quick-start)
 - [Test bot](#test-bot)
 - [Building and Deploying to AWS Lambda](#building-and-deploying-to-aws-lambda)
+- [Use Extensions](#use-extensions)
+- [Write a extension your self](#write-a-extension-your-self)
 - [License](#license)
 
 ## Prerequisites
@@ -130,6 +132,67 @@ bin/watch
 - Make sure your Lambda function role has permission to read/write dynamodb(Set this from AWS IAM roles, could simply attach `AmazonDynamoDBFullAccess` and `AWSLambdaRole` policies to Lambda function's role)
 - Make sure your Lambda function's timeout more than 5 minutes
 - Do not forget to set your RingCentral app's redirect URL to Lambda's API Gateway URL, `https://xxxx.execute-api.us-east-1.amazonaws.com/default/poc-your-bot-name-dev-bot/bot-oauth` for bot app.
+
+## Use Extensions
+
+RingCentral Chatbot Framework for Python Extensions will extend bot command support with simple setting in `.env`.
+
+Just set like this in `.env`
+
+```bash
+EXTENSIONS=ringcentral_bot_framework_extension_botinfo,ringcentral_bot_framework_extension_some_other_extension
+```
+
+And install these exetnsions by `pip install ringcentral_bot_framework_extension_botinfo ringcentral_bot_framework_extension_some_other_extension`, it is done.
+
+![ ](https://github.com/zxdong262/ringcentral-chatbot-python-ext-bot-info/raw/master/screenshots/ss.png)
+
+You can search for more extension in [pypi.org](https://pypi.org) with keyword `ringcentral_bot_framework_extension`.
+
+## Write a extension your self
+
+Write one extension will be simple, just check out [botinfo extension](https://github.com/zxdong262/ringcentral-chatbot-python-ext-bot-info) as an example, you just need to write one function there.
+
+```python
+# botinfo extension's source code
+# https://github.com/zxdong262/ringcentral-chatbot-python-ext-bot-info/blob/master/ringcentral_bot_framework_extension_botinfo/__init__.py
+import pydash as _
+import json
+
+name = 'ringcentral_bot_framework_extension_botinfo'
+
+def botGotPostAddAction(
+  bot,
+  groupId,
+  creatorId,
+  user,
+  text,
+  dbAction
+):
+  """
+  bot got group chat message: text
+  bot extension could send some response
+  return True when bot send message, otherwise return False
+  """
+  if not f'![:Person]({bot.id})' in text:
+    return False
+
+  if 'bot info' in text:
+    botInfo = bot.platform.get('/account/~/extension/~')
+    txt = json.loads(botInfo.text())
+    txt = json.dumps(txt, indent=2)
+    msg = f'![:Person]({creatorId}) bot info json is:\n' + txt
+
+    bot.sendMessage(
+      groupId,
+      {
+        'text': msg
+      }
+    )
+    return True
+  else:
+    return False
+```
 
 ## License
 

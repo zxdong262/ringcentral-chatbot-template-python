@@ -2,7 +2,6 @@
 sample config module
 run "cp config.sample.py config.py" to create local config
 edit config.py functions to override default bot behavior
-since all functions are optional, you could keep those you edited, delete others in config.py
 """
 __name__ = 'localConfig'
 __package__ = 'ringcentral_bot_framework'
@@ -28,7 +27,8 @@ def botGotPostAddAction(
   creatorId,
   user,
   text,
-  dbAction
+  dbAction,
+  handledByExtension
 ):
   """
   bot got group chat message: text
@@ -141,7 +141,8 @@ def botFilters():
   """
   return [
     '/restapi/v1.0/glip/posts',
-    '/restapi/v1.0/glip/groups'
+    '/restapi/v1.0/glip/groups',
+    '/restapi/v1.0/account/~/extension/~'
   ]
 
 def userFilters():
