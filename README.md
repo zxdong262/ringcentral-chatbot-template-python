@@ -40,7 +40,7 @@ npm i
 # so we need a https proxy for ringcentral to visit our local server
 ./bin/proxy
 # will show:
-# Forwarding https://xxxxx.ngrok.io -> localhost:8989
+# Forwarding https://xxxxx.ngrok.io -> localhost:9890
 
 # create env file
 cp .sample.env .env
