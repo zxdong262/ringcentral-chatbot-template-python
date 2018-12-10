@@ -33,7 +33,6 @@ source ./venv/bin/activate
 
 # install deps
 pip install -r requirements.txt
-npm i
 
 # run ngrok proxy
 # since bot need https server,
@@ -85,6 +84,9 @@ For more information, refer to https://docs.aws.amazon.com/general/latest/gr/aws
 
 ```bash
 cp dev/lambda/serverless.sample.yml dev/lambda/serverless.yml
+
+# install serverless, requires nodejs/npm
+npm i
 ```
 
 Edit `dev/lambda/serverless.yml`, and make sure you set the proper name and required env.
