@@ -8,6 +8,7 @@ Template to build RingCentral chatbot with [ringcentral-chatbot-python](https://
 - [Prerequisites](#prerequisites)
 - [Development & Quick start](#development--quick-start)
 - [Test bot](#test-bot)
+- [Create your own bot logic](#create-your-own-bot-logic)
 - [Building and Deploying to AWS Lambda](#building-and-deploying-to-aws-lambda)
 - [Use Extensions](#use-extensions)
 - [Write a extension your self](#write-a-extension-your-self)
@@ -64,6 +65,21 @@ cp config.sample.py config.py
 - Login to [https://glip-app.devtest.ringcentral.com](https://glip-app.devtest.ringcentral.com), find the bot by searching its name. Talk to the bot.
 - Edit config.py to change bot bahavior and test in [https://glip-app.devtest.ringcentral.com](https://glip-app.devtest.ringcentral.com)
 
+## Create your own bot logic
+
+```bash
+# create custom bot config file
+cp config.sample.py config.py
+```
+
+Then just uncomment the method in `config.py` you need to use, write your own bot logic, restart the app, check it in [https://glip-app.devtest.ringcentral.com](https://glip-app.devtest.ringcentral.com).
+
+And we have examples bots you can check out as examples:
+
+- [date-time-chatbot](https://github.com/zxdong262/ringcentral-date-time-chatbot) : Simple ringcentral chatbot which can tell time/date.
+- [assistant-bot](https://github.com/zxdong262/ringcentral-assistant-bot) : Simple assistant Glip bot to show user/company information, this bot will show you how to access user data.
+- [survey-bot](https://github.com/zxdong262/ringcentral-survey-bot) : Example survey bot, this bot will show you how to create/use custom database wrapper.
+
 ## Building and Deploying to AWS Lambda
 
 AWS Lambda with API Gateway and DynamoDB would give us a flexible way to deploy the bot.
@@ -84,9 +100,6 @@ For more information, refer to https://docs.aws.amazon.com/general/latest/gr/aws
 
 ```bash
 cp dev/lambda/serverless.sample.yml dev/lambda/serverless.yml
-
-# install serverless, requires nodejs/npm
-npm i
 ```
 
 Edit `dev/lambda/serverless.yml`, and make sure you set the proper name and required env.
