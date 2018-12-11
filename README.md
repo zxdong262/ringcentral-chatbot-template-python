@@ -32,7 +32,7 @@ virtualenv venv --python=python3
 # use env
 source ./venv/bin/activate
 
-# install deps
+# install required modules
 pip install -r requirements.txt
 
 # run ngrok proxy
@@ -43,17 +43,15 @@ pip install -r requirements.txt
 # Forwarding https://xxxxx.ngrok.io -> localhost:9890
 
 # create env file
-cp .sample.env .env
-# then edit .env, set proper setting,
-# and goto your ringcentral app setting page, set OAuth Redirect URI to https://https://xxxxx.ngrok.io/bot-oauth
+# .env already created from .sample.env
+# just edit .env, set proper setting,
 RINGCENTRAL_BOT_SERVER=https://xxxxx.ngrok.io
 
 ## for bots auth required, get them from your ringcentral app page
 RINGCENTRAL_BOT_CLIENT_ID=
 RINGCENTRAL_BOT_CLIENT_SECRET=
 
-# create custom bot config file
-cp config.sample.py config.py
+# and goto your ringcentral app setting page, set OAuth Redirect URI to https://https://xxxxx.ngrok.io/bot-oauth
 
 # run local dev server
 ./bin/start
