@@ -118,3 +118,4 @@ venv.bak/
 /custom_db.py
 /ringcentral_bot_framework.egg-info
 .DS_Store
+/dev/lambda/config.py
