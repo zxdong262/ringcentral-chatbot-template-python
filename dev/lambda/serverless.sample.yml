@@ -5,9 +5,14 @@ provider:
   name: aws
   runtime: python3.6
   # use existing policies
-  # iamManagedPolicies:
-  #   - 'arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess'
-  #   - 'arn:aws:iam::aws:policy/AWSLambdaExecute'
+  iamManagedPolicies:
+    - 'arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess'
+    - 'arn:aws:iam::aws:policy/AWSLambdaExecute'
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - lambda:InvokeFunction
+      Resource: "*"
 
 # you can overwrite defaults here
 #  stage: dev
