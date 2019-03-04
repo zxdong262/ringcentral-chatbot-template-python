@@ -53,6 +53,9 @@ RINGCENTRAL_BOT_CLIENT_SECRET=
 
 # and goto your ringcentral app setting page, set OAuth Redirect URI to https://https://xxxxx.ngrok.io/bot-oauth
 
+# create bot config
+cp config.sample.py config.py
+
 # run local dev server
 ./bin/start
 ```
@@ -64,11 +67,6 @@ RINGCENTRAL_BOT_CLIENT_SECRET=
 - Edit config.py to change bot bahavior and test in [https://glip-app.devtest.ringcentral.com](https://glip-app.devtest.ringcentral.com)
 
 ## Create your own bot logic
-
-```bash
-# create custom bot config file
-cp config.sample.py config.py
-```
 
 Then just uncomment the method in `config.py` you need to use, write your own bot logic, restart the app, check it in [https://glip-app.devtest.ringcentral.com](https://glip-app.devtest.ringcentral.com).
 
