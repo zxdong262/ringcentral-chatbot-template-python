@@ -25,6 +25,7 @@ Template to build RingCentral chatbot with [ringcentral-chatbot-python](https://
 
 # init
 bin/init
+source ./venv/bin/activate
 
 # run ngrok proxy
 # since bot need https server,
