@@ -34,6 +34,7 @@ source ./venv/bin/activate
 
 # install required modules
 pip install -r requirements.txt
+pip install pyngrok
 
 # run ngrok proxy
 # since bot need https server,
