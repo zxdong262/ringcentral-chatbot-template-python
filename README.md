@@ -23,18 +23,8 @@ Template to build RingCentral chatbot with [ringcentral-chatbot-python](https://
 
 ```bash
 
-# use virtualenv
-pip3 install virtualenv # might need sudo
-
-# init virtual env
-virtualenv venv --python=python3
-
-# use env
-source ./venv/bin/activate
-
-# install required modules
-pip install -r requirements.txt
-pip install pyngrok
+# init
+bin/init
 
 # run ngrok proxy
 # since bot need https server,
@@ -53,9 +43,6 @@ RINGCENTRAL_BOT_CLIENT_ID=
 RINGCENTRAL_BOT_CLIENT_SECRET=
 
 # and goto your ringcentral app setting page, set OAuth Redirect URI to https://https://xxxxx.ngrok.io/bot-oauth
-
-# create bot config
-cp config.sample.py config.py
 
 # run local dev server
 ./bin/start

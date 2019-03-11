@@ -1,0 +1,19 @@
+#!/bin/bash
+cd `dirname $0`
+cd ..
+
+# use virtualenv
+pip3 install virtualenv # might need sudo
+
+# init virtual env
+virtualenv venv --python=python3
+
+# use env
+source ./venv/bin/activate
+
+# install required modules
+pip install -r requirements.txt
+pip install pyngrok
+
+# create bot config
+cp config.sample.py config.py
