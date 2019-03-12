@@ -6,7 +6,7 @@ edit config.py functions to override default bot behavior
 __name__ = 'localConfig'
 __package__ = 'ringcentral_bot_framework'
 
-'''
+
 import copy
 
 def botJoinPrivateChatAction(bot, groupId, user, dbAction):
@@ -253,4 +253,3 @@ def dbName():
   """
   return 'custom'
 
-'''
