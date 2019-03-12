@@ -1,5 +1,5 @@
 flask
 python-dotenv
 pylint
-ringcentral_bot_framework == 0.2.5
+ringcentral_bot_framework == 0.2.7
 boto3
