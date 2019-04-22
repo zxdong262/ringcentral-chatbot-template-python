@@ -1,5 +1,6 @@
 flask
 python-dotenv
 pylint
+ringcentral_chatbot_server
 ringcentral_bot_framework == 0.4.0
 boto3

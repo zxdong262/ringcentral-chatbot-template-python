@@ -44,7 +44,8 @@ RINGCENTRAL_BOT_CLIENT_SECRET=
 # and goto your ringcentral app setting page, set OAuth Redirect URI to https://https://xxxxx.ngrok.io/bot-oauth
 
 # run local dev server
-./bin/start
+# rcs is cli server module from ringcentral_chatbot_server
+rcs bot.py
 ```
 
 ## Test bot
@@ -55,14 +56,14 @@ RINGCENTRAL_BOT_CLIENT_SECRET=
 
 ## Create your own bot logic
 
-- You can edit/add method in `config.py` you need to use, write your own bot logic, restart the app, check it in [https://glip-app.devtest.ringcentral.com](https://glip-app.devtest.ringcentral.com).
-- You can read all configs available from [all-config.py](all-config.py)
+- You can edit/add method in `bot.py` you need to use, write your own bot logic, restart the app, check it in [https://glip-app.devtest.ringcentral.com](https://glip-app.devtest.ringcentral.com).
+- You can read all configs available from [sample-bots/kitchen-sync.py](https://github.com/zxdong262/ringcentral-chatbot-python/blob/master/sample-bots/kitchen-sync.py)
 
 And we have examples bots you can check out as examples:
 
 - [date-time-chatbot](https://github.com/zxdong262/ringcentral-date-time-chatbot) : Simple ringcentral chatbot which can tell time/date.
 - [assistant-bot](https://github.com/zxdong262/ringcentral-assistant-bot) : Simple assistant Glip bot to show user/company information, this bot will show you how to access user data.
-- [survey-bot](https://github.com/zxdong262/ringcentral-survey-bot) : Example survey bot, this bot will show you how to create/use custom database wrapper.
+- [poll-bot](https://github.com/zxdong262/ringcentral-poll-bot) : Example poll bot, this bot will show you how to create/use custom database wrapper.
 
 ## Advanced topics
 
