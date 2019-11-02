@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/zxdong262/ringcentral-chatbot-template-python#readme",
   "devDependencies": {
-    "js-yaml": "3.12.2",
+    "js-yaml": "3.13.1",
     "serverless": "1.33.2",
     "serverless-python-requirements": "4.2.5"
   }
