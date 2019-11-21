@@ -41,7 +41,7 @@ RINGCENTRAL_BOT_SERVER=https://xxxxx.ngrok.io
 RINGCENTRAL_BOT_CLIENT_ID=
 RINGCENTRAL_BOT_CLIENT_SECRET=
 
-# and goto your ringcentral app setting page, set OAuth Redirect URI to https://https://xxxxx.ngrok.io/bot-oauth
+# and goto your ringcentral app setting page, set OAuth Redirect URI to https://xxxxx.ngrok.io/bot-oauth
 
 # run local dev server
 # rcs is cli server module from ringcentral_chatbot_server
